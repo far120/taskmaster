@@ -1,4 +1,3 @@
-
     const taskInput = document.getElementById('task-input');
     const addTaskButton = document.getElementById('add-task-button');
     const taskList = document.getElementById('task-list');
@@ -7,6 +6,7 @@
 
     function updateEmptyState() {
         emptyState.style.display = tasks.length === 0 ? 'block' : 'none';
+        console.log(tasks);
     }
     updateEmptyState();
 
@@ -51,7 +51,7 @@
         if (!taskItem) {
             return;
         }
-        const taskId = taskItem.getAttribute('data-id');
+        const taskId = parseInt(taskItem.dataset.id);
         if (e.target.classList.contains('complete-button')) {
             toggleComplete(taskId);
         } else if (e.target.classList.contains('delete-button')) {
@@ -79,4 +79,3 @@
         taskElement.remove();
         updateEmptyState();
     }
-
