@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+
     const taskInput = document.getElementById('task-input');
     const addTaskButton = document.getElementById('add-task-button');
     const taskList = document.getElementById('task-list');
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!taskItem) {
             return;
         }
-        const taskId = parseInt(taskItem.dataset.id);
+        const taskId = taskItem.getAttribute('data-id');
         if (e.target.classList.contains('complete-button')) {
             toggleComplete(taskId);
         } else if (e.target.classList.contains('delete-button')) {
@@ -79,4 +79,4 @@ document.addEventListener('DOMContentLoaded', () => {
         taskElement.remove();
         updateEmptyState();
     }
-});
+
