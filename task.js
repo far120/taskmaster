@@ -6,7 +6,6 @@
 
     function updateEmptyState() {
         emptyState.style.display = tasks.length === 0 ? 'block' : 'none';
-        console.log(tasks);
     }
     updateEmptyState();
 
