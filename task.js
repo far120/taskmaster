@@ -14,7 +14,7 @@
     });
 
     function addTask(taskText) {
-        if (taskText === ''){
+        if (!taskText.trim()){
              return;
         }
         const task = {

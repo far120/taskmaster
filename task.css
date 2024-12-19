@@ -63,9 +63,9 @@ body {
     justify-content: space-between;
 }
 
-/* .task-text {
-    flex: 1;
-} */
+.task-text {
+    word-break: break-all;
+}
 
 .task-buttons {
     display: flex;
